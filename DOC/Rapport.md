@@ -10,7 +10,7 @@ Le domaine d'application retenu pour ce projet est la météo spatiale, et plus 
 La météo spatiale étudie l'impact de l'activité solaire sur l'environnement spatial terrestre. Lors d'éruptions solaires ou d'éjections de masse coronale, un vent solaire chargé en particules magnétisées frappe la la Terre. Ces événements peuvent perturber les satellites de télécommunication, dégrader les signaux GPS, créer des surtensions sur les réseaux électriques haute tension et générer des aurores polaires.
 
 #### Cohérence d'affichage
-Puisque les séries $B_x$, $B_y$, $B_z$ et $B_t$ partagent la même unité physique (le nanotesla, nT), elles peuvent être superposées directement sur un axe Y unique sans déformer l'affichage.
+Puisque les séries B_x_gse, B_y_gse, B_x_gsm, B_y_gsm et B_t partagent la même unité physique (le nanotesla, nT), elles peuvent être superposées directement sur un axe Y unique sans déformer l'affichage.
 ## L’analyse fonctionnelle
 vous pouvez vois les US avec les lien suivant :
 - US-1 : https://github.com/Gianmarco-Ruberti/P_FUN-Gianmarco/issues/1#issue-5232498212
@@ -31,10 +31,3 @@ La réalisation du projet s'étale sur **24 périodes** réparties du début du 
 | **3. Interface & ScottPlot** | **9 périodes** | Apprentissage de ScottPlot, création de l'interface WPF, affichage des 5 courbes et gestion des Checkboxes. | Commits branche `main` |
 | **4. Fonctionnalités & Tests** | **4 périodes** | Ajout d'une mesure (US-05), création des 2 méthodes d'extension C#, écriture de 3 tests unitaires et corrections. | Rapport de tests |
 | **5. Bilan & Documentation** | **3 périodes** | Rédaction de la section sur l'IA, mise au propre du journal de travail et préparation de la release finale. | **Release Finale (30.10.2026)** |
-
----
-
-<ElicitationsGroup message="Prochaines étapes pour la v1 du 4 septembre :">
-<Elicitation label="Vérifier la checklist avant de faire la release du 4 septembre" query="Quelle est la checklist exacte des éléments à vérifier avant d'envoyer l'email de livraison à XCL le 4 septembre ?"/>
-<Elicitation label="Rédiger l'email de notification pour XCL" query="Peux-tu me préparer le modèle d'email à envoyer à Xavier Carrel pour lui notifier la release v1 ?"/>
-</ElicitationsGroup>
