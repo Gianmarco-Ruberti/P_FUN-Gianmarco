@@ -9,11 +9,11 @@
         private System.Windows.Forms.Button btnImportJson;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.GroupBox grpSeries;
-        private System.Windows.Forms.CheckBox chkBx;
-        private System.Windows.Forms.CheckBox chkBy;
-        private System.Windows.Forms.CheckBox chkBz;
         private System.Windows.Forms.CheckBox chkBt;
-        private System.Windows.Forms.CheckBox chkLat;
+        private System.Windows.Forms.CheckBox chkByGse;
+        private System.Windows.Forms.CheckBox chkBzGse;
+        private System.Windows.Forms.CheckBox chkByGsm;
+        private System.Windows.Forms.CheckBox chkBzGsm;
         private System.Windows.Forms.GroupBox grpAddData;
         private System.Windows.Forms.ComboBox cmbSeriesSelect;
         private System.Windows.Forms.DateTimePicker dtpTimestamp;
@@ -40,11 +40,11 @@
             btnImportJson = new Button();
             lblStatus = new Label();
             grpSeries = new GroupBox();
-            chkBx = new CheckBox();
-            chkBy = new CheckBox();
-            chkBz = new CheckBox();
             chkBt = new CheckBox();
-            chkLat = new CheckBox();
+            chkByGse = new CheckBox();
+            chkBzGse = new CheckBox();
+            chkByGsm = new CheckBox();
+            chkBzGsm = new CheckBox();
             grpAddData = new GroupBox();
             cmbSeriesSelect = new ComboBox();
             dtpTimestamp = new DateTimePicker();
@@ -89,11 +89,11 @@
             // 
             // grpSeries
             // 
-            grpSeries.Controls.Add(chkBx);
-            grpSeries.Controls.Add(chkBy);
-            grpSeries.Controls.Add(chkBz);
             grpSeries.Controls.Add(chkBt);
-            grpSeries.Controls.Add(chkLat);
+            grpSeries.Controls.Add(chkByGse);
+            grpSeries.Controls.Add(chkBzGse);
+            grpSeries.Controls.Add(chkByGsm);
+            grpSeries.Controls.Add(chkBzGsm);
             grpSeries.Dock = DockStyle.Top;
             grpSeries.Location = new Point(10, 170);
             grpSeries.Name = "grpSeries";
@@ -102,55 +102,55 @@
             grpSeries.TabStop = false;
             grpSeries.Text = "Affichage des Séries";
             // 
-            // chkBx
-            // 
-            chkBx.Checked = true;
-            chkBx.CheckState = CheckState.Checked;
-            chkBx.Location = new Point(15, 25);
-            chkBx.Name = "chkBx";
-            chkBx.Size = new Size(104, 24);
-            chkBx.TabIndex = 0;
-            chkBx.Text = "Bx (Nord-Sud)";
-            // 
-            // chkBy
-            // 
-            chkBy.Checked = true;
-            chkBy.CheckState = CheckState.Checked;
-            chkBy.Location = new Point(15, 50);
-            chkBy.Name = "chkBy";
-            chkBy.Size = new Size(104, 24);
-            chkBy.TabIndex = 1;
-            chkBy.Text = "By (Est-Ouest)";
-            // 
-            // chkBz
-            // 
-            chkBz.Checked = true;
-            chkBz.CheckState = CheckState.Checked;
-            chkBz.Location = new Point(15, 75);
-            chkBz.Name = "chkBz";
-            chkBz.Size = new Size(104, 24);
-            chkBz.TabIndex = 2;
-            chkBz.Text = "Bz (Vertical)";
-            // 
             // chkBt
             // 
             chkBt.Checked = true;
             chkBt.CheckState = CheckState.Checked;
-            chkBt.Location = new Point(15, 100);
+            chkBt.Location = new Point(15, 25);
             chkBt.Name = "chkBt";
-            chkBt.Size = new Size(104, 24);
-            chkBt.TabIndex = 3;
+            chkBt.Size = new Size(180, 24);
+            chkBt.TabIndex = 0;
             chkBt.Text = "Bt (Total)";
             // 
-            // chkLat
+            // chkByGse
             // 
-            chkLat.Checked = true;
-            chkLat.CheckState = CheckState.Checked;
-            chkLat.Location = new Point(15, 125);
-            chkLat.Name = "chkLat";
-            chkLat.Size = new Size(104, 24);
-            chkLat.TabIndex = 4;
-            chkLat.Text = "Lat (Angle)";
+            chkByGse.Checked = true;
+            chkByGse.CheckState = CheckState.Checked;
+            chkByGse.Location = new Point(15, 50);
+            chkByGse.Name = "chkByGse";
+            chkByGse.Size = new Size(180, 24);
+            chkByGse.TabIndex = 1;
+            chkByGse.Text = "By (GSE)";
+            // 
+            // chkBzGse
+            // 
+            chkBzGse.Checked = true;
+            chkBzGse.CheckState = CheckState.Checked;
+            chkBzGse.Location = new Point(15, 75);
+            chkBzGse.Name = "chkBzGse";
+            chkBzGse.Size = new Size(180, 24);
+            chkBzGse.TabIndex = 2;
+            chkBzGse.Text = "Bz (GSE)";
+            // 
+            // chkByGsm
+            // 
+            chkByGsm.Checked = true;
+            chkByGsm.CheckState = CheckState.Checked;
+            chkByGsm.Location = new Point(15, 100);
+            chkByGsm.Name = "chkByGsm";
+            chkByGsm.Size = new Size(180, 24);
+            chkByGsm.TabIndex = 3;
+            chkByGsm.Text = "By (GSM)";
+            // 
+            // chkBzGsm
+            // 
+            chkBzGsm.Checked = true;
+            chkBzGsm.CheckState = CheckState.Checked;
+            chkBzGsm.Location = new Point(15, 125);
+            chkBzGsm.Name = "chkBzGsm";
+            chkBzGsm.Size = new Size(180, 24);
+            chkBzGsm.TabIndex = 4;
+            chkBzGsm.Text = "Bz (GSM)";
             // 
             // grpAddData
             // 
@@ -169,7 +169,7 @@
             // cmbSeriesSelect
             // 
             cmbSeriesSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbSeriesSelect.Items.AddRange(new object[] { "Bx", "By", "Bz", "Bt", "Lat" });
+            cmbSeriesSelect.Items.AddRange(new object[] { "bt", "by_gse", "bz_gse", "by_gsm", "bz_gsm" });
             cmbSeriesSelect.Location = new Point(15, 25);
             cmbSeriesSelect.Name = "cmbSeriesSelect";
             cmbSeriesSelect.Size = new Size(200, 23);

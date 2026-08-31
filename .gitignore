@@ -1,0 +1,33 @@
+## Visual Studio / Build Artifacts
+[Bb]in/
+[Oo]bj/
+out/
+log/
+logs/
+
+## Visual Studio Cache & User Files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+## Rider & JetBrains (si utilisé)
+.idea/
+*.sln.iml
+
+## Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[L]og.*
+
+## Dependency folders (NuGet)
+packages/
+*.nuget.props
+*.nuget.targets
+
+## OS Generated Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
