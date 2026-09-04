@@ -1,0 +1,10 @@
+Date,Nom,Temps,État,Description,Type
+"24/08/2026","chore(Introduction): Introduction au projet","[90]","[DONE]","explication du projet, choix du theme, explication des consigne et lecture du cdc"
+"24/08/2026","Initial commit","[3]","[DONE]",""
+"24/08/2026","DOC(Rapport): création du rapport avant projet","[53]","[DONE]","pris du temps pour bien faire un bon rapport avec un tableau pour la planification et un auto pdf pour la release"
+
+"31/08/2026","feat(scottplot): création de la base visuelle et création de la maquette pour les US","[80]","[DONE]","installation de scottplot et création de tout le visuelle avec les screenshot pour les US"
+"31/08/2026","Fix(rapport): correction d'un espace manquant et de la branche de commits","[10]","[DONE]","j'ai relue le rapport en entier avant de commit"
+"31/08/2026","feat(séries): changement des séries","[41]","[DONE]","j'ai pris du temps pour choisir des séries qui sont logiques a mettre sur un graphe ensemble et changement du code pour les mettre"
+"31/08/2026","feat(Rapport): mise du rapport en pdf et supprétion de l'automation non fonctionnel","[26]","[DONE]","j'ai pris du temps a essayer l'automatisation mais j'ai annuler par manque te temps"
+"31/08/2026","fix(sln): suppression d'un fichier inutile","[2]","[DONE]",""
