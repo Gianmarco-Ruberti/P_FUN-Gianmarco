@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plot_those_lines!-Gianmarco")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41d3a6a1f67edecee507595f55bc12cd1f96aade")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caba7391e2ca7ffbb4ba11194e750cc64603df7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plot_those_lines!-Gianmarco")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plot_those_lines!-Gianmarco")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

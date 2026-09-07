@@ -1,3 +1,4 @@
+using Plot_those_lines__Gianmarco.Service;
 using System.Globalization;
 using System.Text.Json;
 
@@ -7,6 +8,8 @@ namespace Plot_those_lines__Gianmarco
     {
         private readonly SolarWindService _solarWindService = new SolarWindService();
         private List<SolarWindPoint> _dataPoints = new List<SolarWindPoint>();
+
+        private readonly ChartService _chartService = new ChartService();
 
         public Form1()
         {
@@ -27,6 +30,8 @@ namespace Plot_those_lines__Gianmarco
                     {
                         _dataPoints = _solarWindService.LoadFromFile(ofd.FileName);
                         lblStatus.Text = $"Statut : {_dataPoints.Count} points chargés";
+
+                        _chartService.PlotSolarWindData(formsPlot1, _dataPoints);
                     }
                     catch (Exception ex)
                     {
