@@ -1,0 +1,70 @@
+{
+  "exportedAt": "2026-09-07T09:19:28.908Z",
+  "format": "Zi-Host / export de données personnelles v1",
+  "compte": {
+    "email": "dami.scoot3@gmail.com",
+    "prenom": "Damien",
+    "nom": "Rochat",
+    "societe": "LXHost",
+    "telephone": null,
+    "adresse": null,
+    "codePostal": null,
+    "ville": null,
+    "pays": "CH",
+    "devise": "CHF",
+    "role": "CLIENT",
+    "creeLe": "2026-09-06T18:44:47.422Z",
+    "compteePanel": null
+  },
+  "services": [
+    {
+      "nom": "test",
+      "logiciel": "Minecraft",
+      "palier": "Basic",
+      "node": "Tython",
+      "statut": "PENDING",
+      "prix": 500,
+      "devise": "CHF",
+      "creeLe": "2026-09-06T18:45:12.201Z",
+      "prochaineEcheance": "2026-09-06T18:45:12.200Z",
+      "remises": []
+    }
+  ],
+  "factures": [
+    {
+      "numero": "ZI-2026-000002",
+      "statut": "UNPAID",
+      "devise": "CHF",
+      "sousTotal": 500,
+      "tva": 41,
+      "total": 541,
+      "remise": 0,
+      "emiseLe": "2026-09-06T18:45:12.234Z",
+      "payeeLe": null,
+      "lignes": [
+        {
+          "description": "Minecraft — Basic — abonnement mensuel",
+          "quantite": 1,
+          "prixUnitaire": 500,
+          "total": 500
+        }
+      ]
+    }
+  ],
+  "tickets": [],
+  "sessions": [
+    {
+      "ouverteLe": "2026-09-06T18:44:47.439Z",
+      "expireLe": "2026-10-06T18:44:47.437Z",
+      "ip": "178.198.171.120",
+      "navigateur": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0"
+    },
+    {
+      "ouverteLe": "2026-09-07T09:19:21.134Z",
+      "expireLe": "2026-10-07T09:19:21.128Z",
+      "ip": "193.5.249.23",
+      "navigateur": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0"
+    }
+  ],
+  "note": "Les mots de passe ne figurent pas dans cet export : ils ne sont stockés que sous forme de condensat bcrypt, non réversible."
+}

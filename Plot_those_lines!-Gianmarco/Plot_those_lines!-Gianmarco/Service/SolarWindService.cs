@@ -1,5 +1,8 @@
 ﻿using Plot_those_lines__Gianmarco;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Text.Json;
 
 public class SolarWindService
@@ -12,7 +15,12 @@ public class SolarWindService
         using (JsonDocument doc = JsonDocument.Parse(jsonContent))
         {
             JsonElement root = doc.RootElement;
-            if (root.ValueKind != JsonValueKind.Array) return dataPoints;
+
+            // 1. Validation du type racine (doit être un tableau JSON)
+            if (root.ValueKind != JsonValueKind.Array)
+            {
+                throw new InvalidDataException("Le fichier JSON doit contenir un tableau d'objets.");
+            }
 
             foreach (JsonElement element in root.EnumerateArray())
             {
@@ -35,6 +43,16 @@ public class SolarWindService
 
                 dataPoints.Add(point);
             }
+        }
+
+        // 2. Validation du contenu : au moins une donnée ou propriété reconnue
+        bool hasValidData = dataPoints.Exists(p => p.Bt.HasValue || p.ByGse.HasValue ||
+                                                  p.BzGse.HasValue || p.ByGsm.HasValue ||
+                                                  p.BzGsm.HasValue);
+
+        if (dataPoints.Count == 0 || !hasValidData)
+        {
+            throw new InvalidDataException("Le fichier ne contient aucune donnée valide du vent solaire.");
         }
 
         return dataPoints;

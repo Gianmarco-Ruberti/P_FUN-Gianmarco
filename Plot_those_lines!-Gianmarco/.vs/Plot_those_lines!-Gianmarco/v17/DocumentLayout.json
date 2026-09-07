@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\service\\chartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\service\\chartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\service\\solarwindservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\service\\solarwindservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\service\\solarwindservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\service\\solarwindservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|c:\\users\\py13koy\\documents\\github\\p_fun\\plot_those_lines!-gianmarco\\plot_those_lines!-gianmarco\\service\\graphiqueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7980B640-EC17-474A-AD09-3F88301ED485}|Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco.csproj|solutionrelative:plot_those_lines!-gianmarco\\service\\graphiqueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,30 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChartService.cs",
-              "DocumentMoniker": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\ChartService.cs",
-              "RelativeDocumentMoniker": "Plot_those_lines!-Gianmarco\\Service\\ChartService.cs",
-              "ToolTip": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\ChartService.cs",
-              "RelativeToolTip": "Plot_those_lines!-Gianmarco\\Service\\ChartService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Plot_those_lines!-Gianmarco\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Form1.Designer.cs",
+              "RelativeToolTip": "Plot_those_lines!-Gianmarco\\Form1.Designer.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwIcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T09:09:52.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GraphiqueService.cs",
+              "DocumentMoniker": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\GraphiqueService.cs",
+              "RelativeDocumentMoniker": "Plot_those_lines!-Gianmarco\\Service\\GraphiqueService.cs",
+              "ToolTip": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\GraphiqueService.cs",
+              "RelativeToolTip": "Plot_those_lines!-Gianmarco\\Service\\GraphiqueService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T07:55:48.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SolarWindService.cs",
               "DocumentMoniker": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\SolarWindService.cs",
               "RelativeDocumentMoniker": "Plot_those_lines!-Gianmarco\\Service\\SolarWindService.cs",
               "ToolTip": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Service\\SolarWindService.cs",
               "RelativeToolTip": "Plot_those_lines!-Gianmarco\\Service\\SolarWindService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T07:11:57.169Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "Plot_those_lines!-Gianmarco\\Form1.cs",
               "ToolTip": "C:\\Users\\py13koy\\Documents\\GitHub\\P_FUN\\Plot_those_lines!-Gianmarco\\Plot_those_lines!-Gianmarco\\Form1.cs",
               "RelativeToolTip": "Plot_those_lines!-Gianmarco\\Form1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwCEAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwDgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T06:25:57.829Z",
               "EditorCaption": ""

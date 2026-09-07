@@ -103,54 +103,54 @@
             grpSeries.Text = "Affichage des Séries";
             // 
             // chkBt
-            // 
+            //
             chkBt.Checked = true;
             chkBt.CheckState = CheckState.Checked;
             chkBt.Location = new Point(15, 25);
             chkBt.Name = "chkBt";
-            chkBt.Size = new Size(180, 24);
+            chkBt.Size = new Size(210, 24); // Largeur ajustée de 180 à 210
             chkBt.TabIndex = 0;
-            chkBt.Text = "Bt (Total)";
-            // 
+            chkBt.Text = "Bt (Total) (0)";
+            //
             // chkByGse
-            // 
+            //
             chkByGse.Checked = true;
             chkByGse.CheckState = CheckState.Checked;
             chkByGse.Location = new Point(15, 50);
             chkByGse.Name = "chkByGse";
-            chkByGse.Size = new Size(180, 24);
+            chkByGse.Size = new Size(210, 24);
             chkByGse.TabIndex = 1;
-            chkByGse.Text = "By (GSE)";
-            // 
+            chkByGse.Text = "By (GSE) (0)";
+            //
             // chkBzGse
-            // 
+            //
             chkBzGse.Checked = true;
             chkBzGse.CheckState = CheckState.Checked;
             chkBzGse.Location = new Point(15, 75);
             chkBzGse.Name = "chkBzGse";
-            chkBzGse.Size = new Size(180, 24);
+            chkBzGse.Size = new Size(210, 24);
             chkBzGse.TabIndex = 2;
-            chkBzGse.Text = "Bz (GSE)";
-            // 
+            chkBzGse.Text = "Bz (GSE) (0)";
+            //
             // chkByGsm
-            // 
+            //
             chkByGsm.Checked = true;
             chkByGsm.CheckState = CheckState.Checked;
             chkByGsm.Location = new Point(15, 100);
             chkByGsm.Name = "chkByGsm";
-            chkByGsm.Size = new Size(180, 24);
+            chkByGsm.Size = new Size(210, 24);
             chkByGsm.TabIndex = 3;
-            chkByGsm.Text = "By (GSM)";
-            // 
+            chkByGsm.Text = "By (GSM) (0)";
+            //
             // chkBzGsm
-            // 
+            //
             chkBzGsm.Checked = true;
             chkBzGsm.CheckState = CheckState.Checked;
             chkBzGsm.Location = new Point(15, 125);
             chkBzGsm.Name = "chkBzGsm";
-            chkBzGsm.Size = new Size(180, 24);
+            chkBzGsm.Size = new Size(210, 24);
             chkBzGsm.TabIndex = 4;
-            chkBzGsm.Text = "Bz (GSM)";
+            chkBzGsm.Text = "Bz (GSM) (0)";
             // 
             // grpAddData
             // 

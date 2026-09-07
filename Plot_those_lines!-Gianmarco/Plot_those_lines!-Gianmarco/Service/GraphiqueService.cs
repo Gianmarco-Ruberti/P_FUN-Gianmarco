@@ -8,7 +8,7 @@ using Plot_those_lines__Gianmarco;
 
 namespace Plot_those_lines__Gianmarco.Service
 {
-    public class ChartService
+    public class GraphiqueService
     {
         public void PlotSolarWindData(FormsPlot formsPlot, List<SolarWindPoint> points)
         {
