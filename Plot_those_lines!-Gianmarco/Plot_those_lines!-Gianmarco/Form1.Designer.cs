@@ -154,17 +154,17 @@
             // 
             // grpAddData
             // 
-            grpAddData.Controls.Add(cmbSeriesSelect);
-            grpAddData.Controls.Add(dtpTimestamp);
-            grpAddData.Controls.Add(txtValue);
-            grpAddData.Controls.Add(btnAddValue);
-            grpAddData.Dock = DockStyle.Top;
-            grpAddData.Location = new Point(10, 10);
-            grpAddData.Name = "grpAddData";
-            grpAddData.Size = new Size(240, 160);
-            grpAddData.TabIndex = 3;
-            grpAddData.TabStop = false;
-            grpAddData.Text = "➕ Saisie Manuelle";
+            //grpAddData.Controls.Add(cmbSeriesSelect);
+            //grpAddData.Controls.Add(dtpTimestamp);
+            //grpAddData.Controls.Add(txtValue);
+            //grpAddData.Controls.Add(btnAddValue);
+            //grpAddData.Dock = DockStyle.Top;
+            //grpAddData.Location = new Point(10, 10);
+            //grpAddData.Name = "grpAddData";
+            //grpAddData.Size = new Size(240, 160);
+            //grpAddData.TabIndex = 3;
+            //grpAddData.TabStop = false;
+            //grpAddData.Text = "➕ Saisie Manuelle";
             // 
             // cmbSeriesSelect
             // 
