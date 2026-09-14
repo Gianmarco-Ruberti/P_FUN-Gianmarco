@@ -1,6 +1,6 @@
 ﻿namespace Plot_those_lines__Gianmarco
 {
-    partial class Form1
+    partial class MainPage
     {
         private System.ComponentModel.IContainer components = null;
 

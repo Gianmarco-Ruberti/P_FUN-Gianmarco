@@ -4,17 +4,18 @@ using System.Text.Json;
 
 namespace Plot_those_lines__Gianmarco
 {
-    public partial class Form1 : Form
+    public partial class MainPage : Form
     {
         private readonly SolarWindService _solarWindService = new SolarWindService();
         private List<SolarWindPoint> _dataPoints = new List<SolarWindPoint>();
 
-        private readonly GraphiqueService _chartService = new GraphiqueService();
+        private readonly GraphicService _chartService = new GraphicService();
 
-        public Form1()
+        public MainPage()
         {
             InitializeComponent();
             btnImportJson.Click += BtnImportJson_Click;
+            this.Load += MainPage_load;
 
             chkBt.CheckedChanged += OnCheckBoxChanged;
             chkByGse.CheckedChanged += OnCheckBoxChanged;
@@ -23,6 +24,17 @@ namespace Plot_those_lines__Gianmarco
             chkBzGsm.CheckedChanged += OnCheckBoxChanged;
         }
 
+        private void MainPage_load(object? sender, EventArgs e)
+        {
+            _dataPoints = _solarWindService.LoadFromLocalCache();
+
+            if (_dataPoints.Count > 0)
+            {
+                lblStatus.Text = $"Statut : {_dataPoints.Count} points restaurés (hors-ligne)";
+                UpdateSeriesLabels(_dataPoints);
+                RefreshPlot();
+            }
+        }
         private void RefreshPlot()
         {
             _chartService.PlotSolarWindData(
