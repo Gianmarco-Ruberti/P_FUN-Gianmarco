@@ -8,3 +8,9 @@ Date,Nom,Temps,État,Description,Type
 "31/08/2026","feat(séries): changement des séries","[41]","[DONE]","j'ai pris du temps pour choisir des séries qui sont logiques a mettre sur un graphe ensemble et changement du code pour les mettre"
 "31/08/2026","feat(Rapport): mise du rapport en pdf et supprétion de l'automation non fonctionnel","[26]","[DONE]","j'ai pris du temps a essayer l'automatisation mais j'ai annuler par manque te temps"
 "31/08/2026","fix(sln): suppression d'un fichier inutile","[2]","[DONE]",""
+"04/09/2026","feat(jdt): création d'un jdt plus beau","[60]","[DONE]","j'ai pris du temps pour faire fonctionné un scripte qui va automatisé je jdt"
+
+"07/09/2026","feat(import): Importation des données","[82]","[DONE]","j'ai eu un problème avec les type de valeur Object et Array et j'ai pris un peu de temps pour séparé le code sur plusieurs fichiers pour amélioré la lisibilité"
+"07/09/2026","feat(Graphique): Affichage des 5 series dans le graphique","[57]","[DONE]","apprentissage de scottplot"
+"07/09/2026","chore(client): revew avec le prof","[36]","[DONE]",""
+"07/09/2026","fix(Importation): Importation des données","[18]","[DONE]",""
