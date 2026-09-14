@@ -78,6 +78,13 @@ namespace Plot_those_lines__Gianmarco
                         // Chargement des nouvelles données
                         var newPoints = _solarWindService.LoadFromFile(ofd.FileName);
 
+                        // Calcul des statistiques
+                        var existingDates = new HashSet<DateTime>(_dataPoints.Select(p => p.TimeTag));
+
+                        int totalImported = newPoints.Count;
+                        int overwrittenCount = newPoints.Count(p => existingDates.Contains(p.TimeTag));
+                        int newlyAddedCount = totalImported - overwrittenCount;
+
                         // Fusion : on combine l'ancienne liste et la nouvelle
                         // GroupBy sur TimeTag permet d'éliminer les doublons de date (on prend First() ou Last())
                         _dataPoints = _dataPoints
@@ -93,11 +100,39 @@ namespace Plot_those_lines__Gianmarco
                         UpdateSeriesLabels(_dataPoints);
 
                         RefreshPlot();
+
+                        // Pop-up de confirmation
+                        string message = $"Importation réussie !\n\n" +
+                                         $"• Données importées : {totalImported}\n" +
+                                         $"• Nouvelles données : {newlyAddedCount}\n" +
+                                         $"• Données écrasées : {overwrittenCount}";
+
+                        MessageBox.Show(
+                            message,
+                            "Importation terminée",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
-                    catch (Exception ex)
+                    catch (InvalidDataException ex)
                     {
-                        MessageBox.Show($"Erreur lors de l'importation : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        lblStatus.Text = "Statut : Erreur d'importation";
+                        MessageBox.Show(
+                            ex.Message,
+                            "Format de fichier incorrect",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                        );
+                        lblStatus.Text = "Statut : Fichier invalide";
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show(
+                            "Impossible de lire ce fichier. Assurez-vous qu'il s'agit d'un fichier JSON valide et qu'il n'est pas utilisé par un autre programme.",
+                            "Erreur de lecture",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        lblStatus.Text = "Statut : Erreur de lecture";
                     }
                 }
             }
