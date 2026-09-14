@@ -11,6 +11,15 @@ Date,Nom,Temps,État,Description,Type
 "04/09/2026","feat(jdt): création d'un jdt plus beau","[60]","[DONE]","j'ai pris du temps pour faire fonctionné un scripte qui va automatisé je jdt"
 
 "07/09/2026","feat(import): Importation des données","[82]","[DONE]","j'ai eu un problème avec les type de valeur Object et Array et j'ai pris un peu de temps pour séparé le code sur plusieurs fichiers pour amélioré la lisibilité"
-"07/09/2026","feat(Graphique): Affichage des 5 series dans le graphique","[57]","[DONE]","apprentissage de scottplot"
+"07/09/2026","feat(Graphique): Affichage des 5 series dans le graphique","[42]","[DONE]","apprentissage de scottplot"
 "07/09/2026","chore(client): revew avec le prof","[36]","[DONE]",""
 "07/09/2026","fix(Importation): Importation des données","[18]","[DONE]",""
+"09/09/2026","feat(jdt): jdt du 07.09.2026","[3]","[DONE]",""
+
+"14/09/2026","fix(gitignore): ignorer les artefacts de build, les fichiers IDE et les logs de test","[14]","[DONE]",""
+"14/09/2026","Fix(.vs): suppression des artefacts et fichiers temporaires dans le github","[10]","[DONE]",""
+"14/09/2026","fix(obj): suppréssion du dossier obj","[4]","[DONE]",""
+"14/09/2026","feat(filtrage dynamique): modification de la visibilité d'une série selon la checkbox qui lui est affilier","[40]","[DONE]","j'ai pris du temps avec le temps de réflexion, l'oublie d'une ligne qui ma fait perdre un peu de temps et le vérification avec l'US"
+"14/09/2026","fix(MainPage): rename du fichier Form1 en MainPage","[5]","[DONE]",""
+"14/09/2026","fix(GraphiqueService): changement de GraphiqueService en GraphicService","[3]","[DONE]","pour avoir tout en anglais"
+"14/09/2026","feat(stockageLocal): création d'un json pour fusionner tout le fichier importé ouverture auto des donné","[67]","[DONE]","Discutions avec le prof pour bien implémenter le stockage ~30min."
