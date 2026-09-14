@@ -10,7 +10,7 @@ namespace Plot_those_lines__Gianmarco.Service
 {
     public class GraphiqueService
     {
-        public void PlotSolarWindData(FormsPlot formsPlot, List<SolarWindPoint> points)
+        public void PlotSolarWindData(FormsPlot formsPlot, List<SolarWindPoint> points, bool showBt = false, bool showByGse = true, bool showBzGse = true, bool showByGsm = true, bool showBzGsm = true)
         {
             // Réinitialise le graphique
             formsPlot.Plot.Clear();
@@ -18,17 +18,20 @@ namespace Plot_those_lines__Gianmarco.Service
             if (points == null || points.Count == 0) return;
 
             // Définition des 5 séries avec leurs couleurs
-            var seriesConfig = new (string Name, System.Drawing.Color Color, Func<SolarWindPoint, double?> Selector)[]
+            var seriesConfig = new (string Name, System.Drawing.Color Color, Func<SolarWindPoint, double?> Selector, bool IsVisible)[]
             {
-                ("Bt", System.Drawing.Color.Black, p => p.Bt),
-                ("By GSE", System.Drawing.Color.Blue, p => p.ByGse),
-                ("Bz GSE", System.Drawing.Color.Red, p => p.BzGse),
-                ("By GSM", System.Drawing.Color.Green, p => p.ByGsm),
-                ("Bz GSM", System.Drawing.Color.Orange, p => p.BzGsm)
+                ("Bt", System.Drawing.Color.Black, p => p.Bt, showBt),
+                ("By GSE", System.Drawing.Color.Blue, p => p.ByGse, showByGse),
+                ("Bz GSE", System.Drawing.Color.Red, p => p.BzGse, showBzGse),
+                ("By GSM", System.Drawing.Color.Green, p => p.ByGsm, showByGsm),
+                ("Bz GSM", System.Drawing.Color.Orange, p => p.BzGsm, showBzGsm)
             };
 
             foreach (var config in seriesConfig)
             {
+                // Si la série n'est pas visible, on passe directement à la suivante
+                if (!config.IsVisible) continue;
+
                 // On extrait les points où le temps et la valeur sont valides
                 var validPoints = points
                     .Where(p => config.Selector(p).HasValue)

@@ -15,6 +15,30 @@ namespace Plot_those_lines__Gianmarco
         {
             InitializeComponent();
             btnImportJson.Click += BtnImportJson_Click;
+
+            chkBt.CheckedChanged += OnCheckBoxChanged;
+            chkByGse.CheckedChanged += OnCheckBoxChanged;
+            chkBzGse.CheckedChanged += OnCheckBoxChanged;
+            chkByGsm.CheckedChanged += OnCheckBoxChanged;
+            chkBzGsm.CheckedChanged += OnCheckBoxChanged;
+        }
+
+        private void RefreshPlot()
+        {
+            _chartService.PlotSolarWindData(
+                formsPlot1,
+                _dataPoints,
+                chkBt.Checked,
+                chkByGse.Checked,
+                chkBzGse.Checked,
+                chkByGsm.Checked,
+                chkBzGsm.Checked
+            );
+        }
+
+        private void OnCheckBoxChanged(object? sender, EventArgs e)
+        {
+            RefreshPlot();
         }
 
         private void UpdateSeriesLabels(List<SolarWindPoint> points)
@@ -43,7 +67,7 @@ namespace Plot_those_lines__Gianmarco
                         lblStatus.Text = $"Statut : {_dataPoints.Count} points chargés";
                         UpdateSeriesLabels(_dataPoints);
 
-                        _chartService.PlotSolarWindData(formsPlot1, _dataPoints);
+                        RefreshPlot();
                     }
                     catch (Exception ex)
                     {
