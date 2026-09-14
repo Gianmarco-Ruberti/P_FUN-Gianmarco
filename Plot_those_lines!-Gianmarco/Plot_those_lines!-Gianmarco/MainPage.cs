@@ -75,8 +75,21 @@ namespace Plot_those_lines__Gianmarco
                 {
                     try
                     {
-                        _dataPoints = _solarWindService.LoadFromFile(ofd.FileName);
-                        lblStatus.Text = $"Statut : {_dataPoints.Count} points chargés";
+                        // Chargement des nouvelles données
+                        var newPoints = _solarWindService.LoadFromFile(ofd.FileName);
+
+                        // Fusion : on combine l'ancienne liste et la nouvelle
+                        // GroupBy sur TimeTag permet d'éliminer les doublons de date (on prend First() ou Last())
+                        _dataPoints = _dataPoints
+                            .Concat(newPoints)
+                            .GroupBy(p => p.TimeTag)
+                            .Select(g => g.Last()) // Garde la donnée du second JSON en cas de conflit
+                            .OrderBy(p => p.TimeTag) // Conserve l'ordre chronologique
+                            .ToList();
+
+                        // Sauvegarde de la liste fusionnée dans le cache local
+                        _solarWindService.SaveToLocalCache(_dataPoints);
+                        lblStatus.Text = $"Statut : {_dataPoints.Count} points disponibless";
                         UpdateSeriesLabels(_dataPoints);
 
                         RefreshPlot();

@@ -7,6 +7,37 @@ using System.Text.Json;
 
 public class SolarWindService
 {
+    private readonly string _localCachePath = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+        "PlotThoseLines",
+        "cached_data.json"
+    );
+    public void SaveToLocalCache(List<SolarWindPoint> dataPoint)
+    {
+        if (dataPoint == null) return;
+        string directory = Path.GetDirectoryName(_localCachePath)!;
+        if (!Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+        string jsonContent = JsonSerializer.Serialize(dataPoint, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(_localCachePath, jsonContent);
+    }
+    public List<SolarWindPoint> LoadFromLocalCache()
+    {
+        if (!File.Exists(_localCachePath)) return new List<SolarWindPoint>();
+
+        try
+        {
+            string jsonContent = File.ReadAllText(_localCachePath);
+            var points = JsonSerializer.Deserialize<List<SolarWindPoint>>(jsonContent);
+            return points ?? new List<SolarWindPoint>();
+        }
+        catch 
+        { 
+            return new List<SolarWindPoint>();
+        }
+    }
     public List<SolarWindPoint> LoadFromFile(string filePath)
     {
         string jsonContent = File.ReadAllText(filePath);
