@@ -23,3 +23,13 @@ Date,Nom,Temps,État,Description,Type
 "14/09/2026","fix(MainPage): rename du fichier Form1 en MainPage","[5]","[DONE]",""
 "14/09/2026","fix(GraphiqueService): changement de GraphiqueService en GraphicService","[3]","[DONE]","pour avoir tout en anglais"
 "14/09/2026","feat(stockageLocal): création d'un json pour fusionner tout le fichier importé ouverture auto des donné","[67]","[DONE]","Discutions avec le prof pour bien implémenter le stockage ~30min."
+"14/09/2026","fix(gitignore): ignorer les artefacts de build, les fichiers IDE et les logs de test","[14]","[DONE]",""
+"14/09/2026","Merge branch 'main' of https://github.com/Gianmarco-Ruberti/P_FUN-Gianmarco","[?]","[?]",""
+"14/09/2026","feat(message): Changement / ajout des pop-up","[23]","[DONE]","changement pour des messages plus user friendly et ajout d'un message de confirmation d'imporation"
+"14/09/2026","feat(jdt): génération du csv de jdt","[4]","[DONE]",""
+
+"28/09/2026","fix(data): suppression de données fantôme","[99]","[DONE]","il y avait des données fantôme a cause d'une double source dans le JSON j'ai mis ~80min pour trouver la cause des données fantôme et ~20min pour réglé le problème"
+"28/09/2026","feat(Test): création du premier test unitaire","[42]","[DONE]","perte de temps avec une erreur lors de la création du projet de test et pour bien commprendre le test"
+"28/09/2026","feat(Test): création du second test","[10]","[DONE]",""
+"28/09/2026","feat(test): création de test 3","[7]","[DONE]",""
+"28/09/2026","feat(Rapport): ajout des nouvelles section du rapport","[13]","[WIP]",""
