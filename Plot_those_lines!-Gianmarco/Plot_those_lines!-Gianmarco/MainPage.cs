@@ -103,7 +103,7 @@ namespace Plot_those_lines__Gianmarco
 
                         // Pop-up de confirmation
                         string message = $"Importation réussie !\n\n" +
-                                         $"• Données importées : {totalImported}\n" +
+                                         $"• Données importées de SOLAR1 : {totalImported}\n" +
                                          $"• Nouvelles données : {newlyAddedCount}\n" +
                                          $"• Données écrasées : {overwrittenCount}";
 

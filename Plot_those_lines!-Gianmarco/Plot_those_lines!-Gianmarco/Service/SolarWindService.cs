@@ -12,6 +12,7 @@ public class SolarWindService
         "PlotThoseLines",
         "cached_data.json"
     );
+
     public void SaveToLocalCache(List<SolarWindPoint> dataPoint)
     {
         if (dataPoint == null) return;
@@ -23,6 +24,7 @@ public class SolarWindService
         string jsonContent = JsonSerializer.Serialize(dataPoint, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(_localCachePath, jsonContent);
     }
+
     public List<SolarWindPoint> LoadFromLocalCache()
     {
         if (!File.Exists(_localCachePath)) return new List<SolarWindPoint>();
@@ -33,11 +35,12 @@ public class SolarWindService
             var points = JsonSerializer.Deserialize<List<SolarWindPoint>>(jsonContent);
             return points ?? new List<SolarWindPoint>();
         }
-        catch 
-        { 
+        catch
+        {
             return new List<SolarWindPoint>();
         }
     }
+
     public List<SolarWindPoint> LoadFromFile(string filePath)
     {
         string jsonContent = File.ReadAllText(filePath);
@@ -56,6 +59,22 @@ public class SolarWindService
             foreach (JsonElement element in root.EnumerateArray())
             {
                 if (element.ValueKind != JsonValueKind.Object) continue;
+
+                //FILTRE SUR LA SOURCE SOLAR1
+                if (element.TryGetProperty("source", out JsonElement sourceElem) &&
+                    sourceElem.ValueKind == JsonValueKind.String)
+                {
+                    // la source n'est pas "SOLAR1" ingnore
+                    if (!string.Equals(sourceElem.GetString(), "SOLAR1", StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+                    //ignore les objets qui n'ont pas de propriété "source"
+                    continue;
+                }
 
                 var point = new SolarWindPoint();
 
@@ -78,12 +97,12 @@ public class SolarWindService
 
         // 2. Validation du contenu : au moins une donnée ou propriété reconnue
         bool hasValidData = dataPoints.Exists(p => p.Bt.HasValue || p.ByGse.HasValue ||
-                                                  p.BzGse.HasValue || p.ByGsm.HasValue ||
-                                                  p.BzGsm.HasValue);
+                                                   p.BzGse.HasValue || p.ByGsm.HasValue ||
+                                                   p.BzGsm.HasValue);
 
         if (dataPoints.Count == 0 || !hasValidData)
         {
-            throw new InvalidDataException("Le fichier ne contient aucune donnée valide du vent solaire.");
+            throw new InvalidDataException("Le fichier ne contient aucune donnée valide du vent solaire pour SOLAR1.");
         }
 
         return dataPoints;
