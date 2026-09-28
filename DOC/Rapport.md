@@ -1,4 +1,10 @@
 # Rapport
+## table des matière
+1. [introduction](#introduction)
+    - 1.1 [objectifs produit](#objectifs-produit)
+    - 1.2 [pédagogique](#pédagogique)
+    - 1.3 [Description du domaine](#description-du-domaine)
+2. []
 ## introduction
 ### objectifs produit
 Le projet Plot Those Lines (PTL) vise à concevoir une application dédiée à la visualisation et à l'analyse de la météo spatiale. L'application permet d'importer, de stocker localement et d'afficher simultanément jusqu'à 5 séries de données complexes sur un axe temporel commun. Grâce à une interface graphique flexible et un mode de fonctionnement 100 % hors-ligne.
@@ -31,3 +37,9 @@ La réalisation du projet s'étale sur **24 périodes** réparties du début du 
 | **3. Interface & ScottPlot** | **9 périodes** | Apprentissage de ScottPlot, création de l'interface WPF, affichage des 5 courbes et gestion des Checkboxes. | Commits branche `main` |
 | **4. Fonctionnalités & Tests** | **4 périodes** | Ajout d'une mesure (US-05), création des 2 méthodes d'extension C#, écriture de 3 tests unitaires et corrections. | Rapport de tests |
 | **5. Bilan & Documentation** | **3 périodes** | Rédaction de la section sur l'IA, mise au propre du journal de travail et préparation de la release finale. | **Release Finale (30.10.2026)** |
+
+## Rapport de tests
+## Utilisation de L'IA dans ce projet
+## Bilan du déroulement de projet
+## Bilan produit
+## Conclusion
