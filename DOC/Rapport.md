@@ -75,6 +75,8 @@ Dans le cadre de ce projet et de la rédaction de ce rapport, une intelligence a
 - Analyse, compréhension et documentation du code : L'assistant a été sollicité pour faciliter l'assimilation de certaines sections complexes du programme, surmonter des points de blocage techniques et optimiser l'annotation du code source. Cette démarche collaborative a permis de garantir une documentation technique particulièrement rigoureuse, lisible et structurée.
 
 - Assistance à la rédaction, reformulation et relecture : Sur le plan rédactionnel, l'outil a servi à la correction orthographique et grammaticale approfondie, tout en aidant à identifier un vocabulaire technique plus précis. Il a également permis de reformuler certaines explications conceptuelles afin de rendre le propos plus fluide, concis et directement accessible au lecteur.
+
+après discution avec le prof je me suis rendus conte que mon utilisation de l'IA pour comprendre le code ètais trop sommaire se qui ne pas pas permis d'apprendre le code au long terme mais que au court terme
 ## Bilan du déroulement de projet
 
 ### Respect du planning
