@@ -4,7 +4,14 @@
     - 1.1 [objectifs produit](#objectifs-produit)
     - 1.2 [pédagogique](#pédagogique)
     - 1.3 [Description du domaine](#description-du-domaine)
-2. []
+2. [analyse fonctionnelle](#lanalyse-fonctionnelle)
+3. [planification initiale](#la-planification-initiale)
+    - 3.1[Macro-Planning](#macro-planning-du-projet)
+4. [Rapport de tests](#rapport-de-tests)
+5. [Utilisation de L'IA](#utilisation-de-lia-dans-ce-projet)
+6. [Bilan de déroulement](#bilan-du-déroulement-de-projet)
+7. [Bilan produit](#bilan-produit)
+8. [Conclusion](#conclusion)
 ## introduction
 ### objectifs produit
 Le projet Plot Those Lines (PTL) vise à concevoir une application dédiée à la visualisation et à l'analyse de la météo spatiale. L'application permet d'importer, de stocker localement et d'afficher simultanément jusqu'à 5 séries de données complexes sur un axe temporel commun. Grâce à une interface graphique flexible et un mode de fonctionnement 100 % hors-ligne.
