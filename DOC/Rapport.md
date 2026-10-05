@@ -76,5 +76,12 @@ Dans le cadre de ce projet et de la rédaction de ce rapport, une intelligence a
 
 - Assistance à la rédaction, reformulation et relecture : Sur le plan rédactionnel, l'outil a servi à la correction orthographique et grammaticale approfondie, tout en aidant à identifier un vocabulaire technique plus précis. Il a également permis de reformuler certaines explications conceptuelles afin de rendre le propos plus fluide, concis et directement accessible au lecteur.
 ## Bilan du déroulement de projet
+
+### Respect du planning
+Bien que le planning initial n'ait pas été entièrement respecté, l'ensemble du projet est resté dans les temps. La réorganisation de certaines tâches s'explique par une réévaluation de leur durée et par l'acquisition de nouvelles connaissances techniques, qui m'ont incité à décaler le stockage local à la fin pour optimiser le travail.
+### Méthodologie
+J'ai appliqué la méthodologie agile Scrum à ce projet. la phase de débriefing en début de session s'est révélée très bénéfique : elle m'a permit de faire le point sur l'avancement avant de me lancer dans le code.
+### Problèmes rencontré
+Le principal obstacle rencontré résidait dans l'apparition de données "fantômes". Celles-ci provenaient d'un doublon lié à une double source de données dans le fichier JSON. Pour y remédier, j'ai mis en place un filtrage préalable afin de ne conserver qu'une seule source, amplement suffisante pour l'analyse.
 ## Bilan produit
 ## Conclusion
