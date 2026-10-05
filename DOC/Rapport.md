@@ -70,6 +70,11 @@ les 3 test valide les points suivant :
 - Description : S'assure que l'application ne traite pas un fichier invalide ou sans les données demander.
 - Couverture : Bloc de validation final hasValidData et levée d'exception InvalidDataException.
 ## Utilisation de L'IA dans ce projet
+Dans le cadre de ce projet et de la rédaction de ce rapport, une intelligence artificielle a été utilisée comme outil d'assistance méthodologique et technique. Son intervention s'est articulée autour de deux axes principaux :
+
+- Analyse, compréhension et documentation du code : L'assistant a été sollicité pour faciliter l'assimilation de certaines sections complexes du programme, surmonter des points de blocage techniques et optimiser l'annotation du code source. Cette démarche collaborative a permis de garantir une documentation technique particulièrement rigoureuse, lisible et structurée.
+
+- Assistance à la rédaction, reformulation et relecture : Sur le plan rédactionnel, l'outil a servi à la correction orthographique et grammaticale approfondie, tout en aidant à identifier un vocabulaire technique plus précis. Il a également permis de reformuler certaines explications conceptuelles afin de rendre le propos plus fluide, concis et directement accessible au lecteur.
 ## Bilan du déroulement de projet
 ## Bilan produit
 ## Conclusion
