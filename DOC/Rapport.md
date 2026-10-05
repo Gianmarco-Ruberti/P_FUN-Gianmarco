@@ -84,4 +84,22 @@ J'ai appliqué la méthodologie agile Scrum à ce projet. la phase de débriefin
 ### Problèmes rencontré
 Le principal obstacle rencontré résidait dans l'apparition de données "fantômes". Celles-ci provenaient d'un doublon lié à une double source de données dans le fichier JSON. Pour y remédier, j'ai mis en place un filtrage préalable afin de ne conserver qu'une seule source, amplement suffisante pour l'analyse.
 ## Bilan produit
+### 7.1 Prévu / réalisé
+
+| Fonctionnalité | Prévue | Réalisée | Commentaire |
+|:---|:---:|:---:|:---|
+| Stockage local des séries temporelles (US1) | Oui |  Oui | L'objectif est d'enregistrer automatiquement les 5 séries temporelles importées sur le poste de l'utilisateur pour qu'elles restent accessibles et rechargeables au redémarrage, même sans connexion réseau. |
+| Importation des données du champ magnétique (US2) | Oui |  Oui | L'objectif est d'extraire de manière sécurisée et hors-ligne 5 séries temporelles spatiales de plus de 500 points chacune, tout en gérant proprement les cas de fichiers corrompus avec un message d'erreur. |
+| Affichage graphique simultané des 5 séries (US3) | Oui |  Oui | L'objectif est d'afficher sur un graphique unique les courbes distinguées par couleur, partageant un axe temporel commun et une échelle unifiée en nanoteslas |
+| Sélection et filtrage dynamique des séries (US4) | Oui |  Oui | L'objectif est de permettre à l'utilisateur de masquer ou réafficher instantanément chaque courbe sur le graphique sans recharger les données. |
+
+#### Fonctions ajoutées, non prévues initialement
+
+Ces fonctions ne sont dans aucune user story. Elles sont nées des problèmes
+rencontrés pendant le développement :
+
+| Ajout | Raison |
+|:---|:---|
+|filtre des source de données | acause d'une double source de données il y avais de données phantome
+
 ## Conclusion
