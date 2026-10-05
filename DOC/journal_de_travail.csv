@@ -33,3 +33,11 @@ Date,Nom,Temps,État,Description,Type
 "28/09/2026","feat(Test): création du second test","[10]","[DONE]",""
 "28/09/2026","feat(test): création de test 3","[7]","[DONE]",""
 "28/09/2026","feat(Rapport): ajout des nouvelles section du rapport","[13]","[WIP]",""
+"28/09/2026","feat(jdt): jdt du 28.09.2026","[1]","[DONE]",""
+
+"05/10/2026","feat(Rapport): fin de la table des matière","[10]","[DONE]",""
+"05/10/2026","feat(rapport): complétion de la section ""Rapport de tests""","[44]","[DONE]","j'ai pris du temps pour le faire beau"
+"05/10/2026","feat(rapport): complétion de la section ""Utilisation de L'IA dans ce projet""","[28]","[DONE]",""
+"05/10/2026","feat(rapport): complétion de la section ""Bilan du déroulement de projet""","[33]","[DONE]",""
+"05/10/2026","feat(rapport): complétion de la section ""Bilan produit""","[52]","[DONE]","~25 min de discutions avec le prof pour expliquer du code et ~30 pour faire tout beau"
+"05/10/2026","feat(rapport): continuer la section d'IA après discutions avec le prof","[4]","[WIP]",""
