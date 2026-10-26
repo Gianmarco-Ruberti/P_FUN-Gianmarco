@@ -27,29 +27,42 @@ namespace Plot_those_lines__Gianmarco.Service
                 ("Bz GSM", System.Drawing.Color.Orange, p => p.BzGsm, showBzGsm)
             };
 
-            foreach (var config in seriesConfig)
-            {
-                // Si la série n'est pas visible, on passe directement à la suivante
-                if (!config.IsVisible) continue;
+            // Filtrer les configurations pour ne garder que les séries marquées comme visibles
+            seriesConfig
+                .Where(config => config.IsVisible)
+                .Select(config => new
+                {
+                    Config = config,
+                    // Pour chaque configuration visible, filtrer et transformer la liste des points bruts
+                    ValidPoints = points
+                        .Where(p => config.Selector(p).HasValue) // Ne garde que les points où la valeur sélectionnée existe
+                        .Select(p => new {
+                            Time = p.TimeTag.ToOADate(),         // Convertit la date/heure en format numérique (OADate) compatible avec le graphique
+                            Value = config.Selector(p)!.Value    // Extrait la valeur numérique de la donnée
+                        })
+                       .ToList()
+                })
+                // Ne conserver que les configurations qui possèdent au moins un point valide à tracer
+                .Where(x => x.ValidPoints.Count > 0)
+                .ToList()
+                // Parcourir chaque série de données prête pour l'ajouter visuellement au graphique
+                .ForEach(x =>
+                {
+                    // Extraction des coordonnées X (temps) et Y (valeur) sous forme de tableaux de doubles
+                    double[] xs = x.ValidPoints.Select(p => p.Time).ToArray();
+                    double[] ys = x.ValidPoints.Select(p => p.Value).ToArray();
 
-                // On extrait les points où le temps et la valeur sont valides
-                var validPoints = points
-                    .Where(p => config.Selector(p).HasValue)
-                    .Select(p => new { Time = p.TimeTag.ToOADate(), Value = config.Selector(p)!.Value })
-                    .ToList();
+                    // Création et ajout de la courbe de dispersion (Scatter plot) dans le composant ScottPlot
+                    ScottPlot.Plottables.Scatter scatter = formsPlot.Plot.Add.Scatter(xs, ys);
 
-                if (validPoints.Count == 0) continue;
+                    scatter.Label = x.Config.Name; // Assigne le nom de la série
 
-                double[] xs = validPoints.Select(p => p.Time).ToArray();
-                double[] ys = validPoints.Select(p => p.Value).ToArray();
+                    // Applique la couleur de la série en convertissant les composantes RVB
+                    scatter.Color = new ScottPlot.Color(x.Config.Color.R, x.Config.Color.G, x.Config.Color.B);
 
-                // Ajout de la courbe
-                var scatter = formsPlot.Plot.Add.Scatter(xs, ys);
-                scatter.Label = config.Name;
-                scatter.Color = new ScottPlot.Color(config.Color.R, config.Color.G, config.Color.B);
-                scatter.LineWidth = 2;
-                scatter.MarkerSize = 0; // Pas de points/marqueurs, uniquement la ligne
-            }
+                    scatter.LineWidth = 2;   // Définit l'épaisseur de la ligne à 2 pixels
+                    scatter.MarkerSize = 0;  // Masque les points de marquage individuels
+                });
 
             // Configuration de l'axe X pour le temps
             formsPlot.Plot.Axes.DateTimeTicksBottom();
