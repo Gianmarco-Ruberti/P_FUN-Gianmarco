@@ -150,7 +150,7 @@ public class SolarWindService
         if (propElem.ValueKind == JsonValueKind.Number && propElem.TryGetDouble(out double valNum))
             return valNum;
 
-        // Si c' اله stocké sous forme de chaîne de caractères, tente de la parser en double de manière neutre (InvariantCulture)
+        // Si c'est stocké sous forme de chaîne de caractères, tente de la parser en double de manière neutre (InvariantCulture)
         if (propElem.ValueKind == JsonValueKind.String &&
             double.TryParse(propElem.GetString(), NumberStyles.Any, CultureInfo.InvariantCulture, out double valStr))
             return valStr;
