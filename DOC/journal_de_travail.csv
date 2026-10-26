@@ -42,3 +42,10 @@ Date,Nom,Temps,État,Description,Type
 "05/10/2026","feat(rapport): complétion de la section ""Bilan produit""","[52]","[DONE]","~25 min de discutions avec le prof pour expliquer du code et ~30 pour faire tout beau"
 "05/10/2026","feat(rapport): continuer la section d'IA après discutions avec le prof","[4]","[WIP]",""
 "05/10/2026","feat(jdt): jdt du 05.10.2026","[2]","[DONE]",""
+"10/10/2026","feat(jdt): mise a jour du journal de travail excel","[?]","[?]",""
+
+"11/10/2026","feat(DOC): ajout de la doc en pdf","[300]","[DONE]","j'ai passé entre vendredi et aujourd'hui 5h a réparé l'impression en pdf de ma machine"
+
+"17/10/2026","chore(project): Ajouter un commentaire d'évaluation à 80%","[?]","[?]",""
+
+"26/10/2026","feat(Service): Remplacer les foreach","[177]","[DONE]","pendant le travaille j'ai pris ~30min pour réglé une erreur de fichier pour le test(envoi du fichier vierges plutôt que le modifier), ~30min pour répondre a des question du prof le reste du temps a été surtout pris par la compréhension du code, le remplacement du code et les commentaire"
