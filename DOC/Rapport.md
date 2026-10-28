@@ -159,4 +159,8 @@ rencontrés pendant le développement :
 |filtre des source de données | a cause d'une double source de données il y avais de données phantome
 
 ## Conclusion
-Au cour de se projet
+Au cours de ce projet, j'ai pu concevoir une application dédiée à la visualisation graphique en partant de demandes précises en termes de fonctionnalités : le stockage local, l'importation, le filtrage et l'affichage simultané de séries temporelles, pour lesquelles j'ai choisi le thème du champ magnétique interplanétaire. Ce projet m'a offert un bon cadre pour mettre en pratique les compétences de LINQ vues pendant le module.
+
+Sur le plan personnel, ce projet m'a permis de comprendre l'importance d'une bonne structure de code et d'une bonne gestion des imprévus, comme la gestion des doublons de sources. Les discussions sur le code pendant ce projet m'ont aussi permis de souligner les défauts de ma manière d'apprentissage, qui était trop limitée dans le temps lors de l'utilisation de l'IA.
+
+En somme, PTL a été un projet que j'ai apprécié et qui m'a permis de mieux gérer mes projets, de mieux comprendre la programmation et d'améliorer ma méthode d'apprentissage avec l'assistance de l'IA.
