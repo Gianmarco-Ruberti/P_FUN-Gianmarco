@@ -267,6 +267,14 @@ rencontrés pendant le développement :
 |:---|:---|
 |filtre des source de données | a cause d'une double source de données il y avais de données phantome
 
+#### Améliorations possibles
+
+Malgré l'atteinte des objectifs fixés et le bon fonctionnement de l'application, plusieurs pistes d'amélioration pourraient être apportées pour faire évoluer le projet :
+
+- Architecture Data-Driven centralisée : Bien que demandée lors de l'évaluation à 80 %, cette approche n'a pas pu être intégrée dans la branche principale. En effet, je ne comprenais pas suffisamment bien le code existant pour réaliser le merge en toute confiance. Donc, comme convenu lors de notre discussion, je l'ai laissée dans une autre branche et j'ai rédigé ce paragraphe pour expliquer la raison de son absence.
+
+- Connexion en direct aux flux de données de la NOAA : L'application repose actuellement sur une importation manuelle de fichiers JSON ou l'utilisation d'un stockage local. Une évolution majeure consisterait à intégrer un service réseau capable d'interroger automatiquement l'API en ligne de la NOAA pour récupérer les dernières mesures du satellite DSCOVR en temps réel.
+
 ## Conclusion
 Au cours de ce projet, j'ai pu concevoir une application dédiée à la visualisation graphique en partant de demandes précises en termes de fonctionnalités : le stockage local, l'importation, le filtrage et l'affichage simultané de séries temporelles, pour lesquelles j'ai choisi le thème du champ magnétique interplanétaire. Ce projet m'a offert un bon cadre pour mettre en pratique les compétences de LINQ vues pendant le module.
 
