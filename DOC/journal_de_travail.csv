@@ -26,7 +26,7 @@ Date,Nom,Temps,État,Description,Type
 "14/09/2026","fix(gitignore): ignorer les artefacts de build, les fichiers IDE et les logs de test","[14]","[DONE]",""
 "14/09/2026","Merge branch 'main' of https://github.com/Gianmarco-Ruberti/P_FUN-Gianmarco","[?]","[?]",""
 "14/09/2026","feat(message): Changement / ajout des pop-up","[23]","[DONE]","changement pour des messages plus user friendly et ajout d'un message de confirmation d'imporation"
-"14/09/2026","feat(jdt): génération du csv de jdt","[4]","[DONE]",""
+"14/09/2026","feat(jdt): génération du csv de jdt","[0]","[DONE]",""
 
 "28/09/2026","fix(data): suppression de données fantôme","[99]","[DONE]","il y avait des données fantôme a cause d'une double source dans le JSON j'ai mis ~80min pour trouver la cause des données fantôme et ~20min pour réglé le problème"
 "28/09/2026","feat(Test): création du premier test unitaire","[42]","[DONE]","perte de temps avec une erreur lors de la création du projet de test et pour bien commprendre le test"
@@ -42,10 +42,18 @@ Date,Nom,Temps,État,Description,Type
 "05/10/2026","feat(rapport): complétion de la section ""Bilan produit""","[52]","[DONE]","~25 min de discutions avec le prof pour expliquer du code et ~30 pour faire tout beau"
 "05/10/2026","feat(rapport): continuer la section d'IA après discutions avec le prof","[4]","[WIP]",""
 "05/10/2026","feat(jdt): jdt du 05.10.2026","[2]","[DONE]",""
-"10/10/2026","feat(jdt): mise a jour du journal de travail excel","[?]","[?]",""
+"10/10/2026","feat(jdt): mise a jour du journal de travail excel","[0]","[DONE]",""
 
 "11/10/2026","feat(DOC): ajout de la doc en pdf","[300]","[DONE]","j'ai passé entre vendredi et aujourd'hui 5h a réparé l'impression en pdf de ma machine"
 
-"17/10/2026","chore(project): Ajouter un commentaire d'évaluation à 80%","[?]","[?]",""
-
 "26/10/2026","feat(Service): Remplacer les foreach","[177]","[DONE]","pendant le travaille j'ai pris ~30min pour réglé une erreur de fichier pour le test(envoi du fichier vierges plutôt que le modifier), ~30min pour répondre a des question du prof le reste du temps a été surtout pris par la compréhension du code, le remplacement du code et les commentaire"
+"26/10/2026","feat(jdt): jdt du 26.10.2026","[1]","[DONE]",""
+"26/10/2026","fix(commentaire): erreur de commentaire auto","[0]","[DONE]",""
+
+"28/10/2026","feat(Rapport): amélioration de la section ""L’analyse fonctionnelle""","[40]","[DONE]","20min de discussion avec le prof et 20min pour l'installation et la prise en mains de gistodoc pour extraire les US j'ai ajouté les US dans le rapport et non plus uniquement les liens vers eux"
+"28/10/2026","feat(Rapport): complétion de la conclusion","[21]","[WIP]",""
+
+"30/10/2026","feat(Rapport): Réécrire la section IA","[65]","[DONE]","j'ai réécrit la section IA en ajoutant : outil(s) utilisé(s), mode d'utilisation, exemples concrets (prompt, réponse, ce qui a été compris ou corrigé) et Bilan critique et prise de recul se qui m'a pris beaucoup de temps"
+"30/10/2026","feat(Service): changement du nom de cache vers storage","[5]","[DONE]",""
+"30/10/2026","feat(MainPage): Rendre la configuration des séries data-driven","[120]","[DONE]","j'ai pris un long moment pour bien comprendre le data driven et comment le faire + le temp de codé assisté avec IA et analysé le code pour tout comprendre (pas fini de comprendre mais commit pour continuer chez moi)"
+"30/10/2026","feat(Rapport): Améliorations possibles","[15]","[DONE]",""
