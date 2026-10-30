@@ -124,13 +124,122 @@ les 3 test valide les points suivant :
 - Description : S'assure que l'application ne traite pas un fichier invalide ou sans les données demander.
 - Couverture : Bloc de validation final hasValidData et levée d'exception InvalidDataException.
 ## Utilisation de L'IA dans ce projet
-Dans le cadre de ce projet et de la rédaction de ce rapport, une intelligence artificielle a été utilisée comme outil d'assistance méthodologique et technique. Son intervention s'est articulée autour de deux axes principaux :
+Cette section décrit l'usage réel de l'IA sur le projet : l'outil unique utilisé, son mode d'utilisation, un exemple concret et ce que j'ai vérifié ou corrigé avant d'intégrer les modifications dans le projet.
+### Outils et modes d'utilisation
 
-- Analyse, compréhension et documentation du code : L'assistant a été sollicité pour faciliter l'assimilation de certaines sections complexes du programme, surmonter des points de blocage techniques et optimiser l'annotation du code source. Cette démarche collaborative a permis de garantir une documentation technique particulièrement rigoureuse, lisible et structurée.
+Pour la réalisation de ce projet et la rédaction de ce rapport, j'ai eu recours à un unique outil : Gemini, utilisé exclusivement via son interface de chat en ligne.
 
-- Assistance à la rédaction, reformulation et relecture : Sur le plan rédactionnel, l'outil a servi à la correction orthographique et grammaticale approfondie, tout en aidant à identifier un vocabulaire technique plus précis. Il a également permis de reformuler certaines explications conceptuelles afin de rendre le propos plus fluide, concis et directement accessible au lecteur.
+- Assistance technique : Conception de la logique de filtrage (ciblage strict de la source SOLAR1).
 
-après discution avec le prof je me suis rendus conte que mon utilisation de l'IA pour comprendre le code ètais trop sommaire se qui ne pas pas permis d'apprendre le code au long terme mais que au court terme
+- Assistance rédactionnelle : Relecture, correction orthographique, reformulation et structuration globale du rapport technique.
+
+La démarche n'était pas de laisser l'IA faire tout le travail de manière aveugle, mais de l'utiliser comme un assistant de codage et de relecture. Chaque bloc de code proposé a dû être analysé, intégré manuellement et testé pour s'assurer qu'il fonctionnait correctement dans la solution.
+### Exemple concret d'utilisation
+
+#### Exemple 1 — Refactorisation et explication de la méthode de parsing GetDoubleProperty
+
+**Demande / Prompt :**
+```C#
+private double? GetDoubleProperty(JsonElement element, string propertyName)
+
+{
+
+    if (!element.TryGetProperty(propertyName, out JsonElement propElem) || propElem.ValueKind == JsonValueKind.Null)
+
+        return null;
+
+
+    if (propElem.ValueKind == JsonValueKind.Number && propElem.TryGetDouble(out double valNum))
+
+        return valNum;
+
+
+    if (propElem.ValueKind == JsonValueKind.String &&
+
+        double.TryParse(propElem.GetString(), NumberStyles.Any, CultureInfo.InvariantCulture, out double valStr))
+
+        return valStr;
+
+
+    return null;
+
+} 
+```
+**Réponse de l'IA :**
+
+Voici l'explication de cette version condensée de la méthode GetDoubleProperty :
+Rôle général
+
+Cette méthode extrait la valeur numérique d'une propriété spécifique dans un objet JSON (JsonElement) et la retourne sous forme de double? (un nombre décimal pouvant être nul). Elle gère aussi bien les nombres stockés directement en tant que types numériques JSON que ceux stockés sous forme de chaînes de caractères (ex: "12.34").
+Explication pas à pas
+1. Vérification de l'existence et des valeurs nulles
+```C#
+
+if (!element.TryGetProperty(propertyName, out JsonElement propElem) || propElem.ValueKind == JsonValueKind.Null)
+    return null;
+```
+Cette ligne combine deux contrôles :
+
+TryGetProperty : Tente de trouver la propriété nommée propertyName. Si elle n'existe pas dans l'objet JSON, la méthode s'arrête immédiatement et renvoie null.
+
+ValueKind == JsonValueKind.Null : Si la propriété existe mais contient explicitement null (ex: "by_gse": null), elle renvoie également null.
+
+2. Extraction si la valeur est un nombre
+```C#
+
+if (propElem.ValueKind == JsonValueKind.Number && propElem.TryGetDouble(out double valNum))
+    return valNum;
+```
+Si le JSON contient un nombre natif (ex: "bt": 5.4), propElem.ValueKind vaut Number.
+
+TryGetDouble convertit directement cet élément JSON en type double C# et le renvoie.
+
+3. Extraction si la valeur est une chaîne de texte
+```C#
+
+if (propElem.ValueKind == JsonValueKind.String &&
+    double.TryParse(propElem.GetString(), NumberStyles.Any, CultureInfo.InvariantCulture, out double valStr))
+    return valStr;
+```
+Si la valeur est entourée de guillemets dans le JSON (ex: "bt": "5.4"), propElem.ValueKind vaut String.
+
+double.TryParse tente de convertir le texte en double.
+
+CultureInfo.InvariantCulture garantit que le point (.) est bien utilisé comme séparateur décimal, indépendamment des paramètres régionaux de l'ordinateur qui exécute le programme.
+
+4. Valeur par défaut
+```C#
+return null;
+```
+Si la propriété existe mais n'est ni un nombre valide ni un texte convertible en nombre (par exemple un boooléen true ou un tableau []), la méthode retourne null.
+Ce qui change par rapport à la version précédente
+
+C'est une refactorisation plus propre :
+
+    Les vérifications d'existence (TryGetProperty) et de valeur nulle (JsonValueKind.Null) ont été fusionnées en une seule condition au début, ce qui évite les répétitions et rend le code plus lisible.
+
+**Ce qui a été compris ou corrigé :**
+
+J'ai compris l'utilité de fusionner les conditions de sécurité (TryGetProperty et Null) dès le début de la méthode pour éviter d'alourdir le code. J'ai également validé l'importance d'utiliser CultureInfo.InvariantCulture pour garantir que le point décimal est correctement lu peu importe la configuration linguistique de l'ordinateur qui exécute l'application.
+
+#### Exemple 2 — coorection de l'orthographe sans en changer les mots 
+
+**Demande / Prompt :**
+
+le planning initial n'a pas été réspecter a 100% car je ne j'avais surrésitimé cèraine tâches, sous esstimer d'autre et après avoir améloré mais connaissance technique j'ai deplacer le stockage local a la fin pour une meilleur fluidité mais en général le planning a été respécté 
+
+**Réponse de l'IA :**
+
+Voici votre texte avec l'orthographe et la grammaire corrigées, sans avoir changé ni supprimé de mots :
+
+Le planning initial n'a pas été respecté à 100% car je n'avais surestimé certaines tâches, sous-estimé d'autres et après avoir amélioré mes connaissances techniques j'ai déplacé le stockage local à la fin pour une meilleure fluidité mais en général le planning a été respecté.
+
+**Ce qui a été compris ou corrigé :**
+
+J'ai utilisé l'IA strictement comme un outil de correction orthographique et grammaticale de base (avec la consigne implicite de ne pas réécrire mon style). J'ai vérifié la proposition pour m'assurer qu'elle corrigeait mes fautes de frappe (réspecter -> respecté, surrésitimé -> surestimé, cèraine -> certaines, etc.) tout en préservant exactement mes propres mots et ma tournure de phrase originale.
+
+### Bilan critique et prise de recul
+Après discussion avec mon professeur, j'ai pris conscience d'un écueil important dans ma méthode de travail : l'utilisation que j'avais de l'IA pour comprendre ou corriger le code était parfois trop sommaire. En obtenant des solutions prêtes à l'emploi trop rapidement, cela ne m'a pas permis d'ancrer les connaissances sur le long terme, privilégiant une résolution immédiate à court terme. Cette prise de recul m'a permis de mettre en lumière les limites de ma méthode d'apprentissage face à ces assistants, et m'incite à approfondir par moi-même la logique interne du code pour mes futurs projets.
 ## Bilan du déroulement de projet
 
 ### Respect du planning
