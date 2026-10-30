@@ -8,22 +8,22 @@ using System.Text.Json;
 
 public class SolarWindService
 {
-    // Chemin local de stockage du cache (dans le dossier ApplicationData de l'utilisateur)
-    private readonly string _localCachePath = Path.Combine(
+    // Chemin local du stockage persistant (dans le dossier ApplicationData de l'utilisateur)
+    private readonly string _localStoragePath = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "PlotThoseLines",
-        "cached_data.json"
+        "stored_data.json"
     );
 
     /// <summary>
-    /// Sérialise et sauvegarde une liste de points de vent solaire dans le fichier de cache local.
+    /// Sérialise et sauvegarde une liste de points de vent solaire dans le fichier de stockage local.
     /// </summary>
-    public void SaveToLocalCache(List<SolarWindPoint> dataPoint)
+    public void SaveToLocalStorage(List<SolarWindPoint> dataPoint)
     {
         if (dataPoint == null) return;
 
-        // Récupère le chemin du répertoire du cache
-        string directory = Path.GetDirectoryName(_localCachePath)!;
+        // Récupère le chemin du répertoire de stockage
+        string directory = Path.GetDirectoryName(_localStoragePath)!;
 
         // Crée le dossier s'il n'existe pas encore sur le disque
         if (!Directory.Exists(directory))
@@ -31,23 +31,23 @@ public class SolarWindService
             Directory.CreateDirectory(directory);
         }
 
-        // Convertit la liste en JSON formaté (indenté) et l'écrit dans le fichier
+        // Convertit la liste en JSON formaté (indenté) et l'écrit dans le fichier de stockage
         string jsonContent = JsonSerializer.Serialize(dataPoint, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(_localCachePath, jsonContent);
+        File.WriteAllText(_localStoragePath, jsonContent);
     }
 
     /// <summary>
-    /// Charge les données depuis le fichier de cache local, s'il existe.
+    /// Charge les données depuis le fichier de stockage local, s'il existe.
     /// </summary>
-    public List<SolarWindPoint> LoadFromLocalCache()
+    public List<SolarWindPoint> LoadFromLocalStorage()
     {
-        // Si le fichier de cache n'existe pas, retourne une liste vide
-        if (!File.Exists(_localCachePath)) return new List<SolarWindPoint>();
+        // Si le fichier de stockage n'existe pas, retourne une liste vide
+        if (!File.Exists(_localStoragePath)) return new List<SolarWindPoint>();
 
         try
         {
-            // Lit le contenu du cache et le désérialise en liste de points
-            string jsonContent = File.ReadAllText(_localCachePath);
+            // Lit le contenu du fichier et le désérialise en liste de points
+            string jsonContent = File.ReadAllText(_localStoragePath);
             var points = JsonSerializer.Deserialize<List<SolarWindPoint>>(jsonContent);
             return points ?? new List<SolarWindPoint>();
         }
