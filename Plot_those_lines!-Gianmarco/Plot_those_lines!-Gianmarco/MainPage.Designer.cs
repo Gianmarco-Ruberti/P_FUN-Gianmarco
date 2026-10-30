@@ -9,11 +9,6 @@
         private System.Windows.Forms.Button btnImportJson;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.GroupBox grpSeries;
-        private System.Windows.Forms.CheckBox chkBt;
-        private System.Windows.Forms.CheckBox chkByGse;
-        private System.Windows.Forms.CheckBox chkBzGse;
-        private System.Windows.Forms.CheckBox chkByGsm;
-        private System.Windows.Forms.CheckBox chkBzGsm;
         private System.Windows.Forms.GroupBox grpAddData;
         private System.Windows.Forms.ComboBox cmbSeriesSelect;
         private System.Windows.Forms.DateTimePicker dtpTimestamp;
@@ -40,20 +35,15 @@
             btnImportJson = new Button();
             lblStatus = new Label();
             grpSeries = new GroupBox();
-            chkBt = new CheckBox();
-            chkByGse = new CheckBox();
-            chkBzGse = new CheckBox();
-            chkByGsm = new CheckBox();
-            chkBzGsm = new CheckBox();
             grpAddData = new GroupBox();
             cmbSeriesSelect = new ComboBox();
             dtpTimestamp = new DateTimePicker();
             txtValue = new TextBox();
             btnAddValue = new Button();
             formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            panelCheckboxes = new FlowLayoutPanel();
             panelControl.SuspendLayout();
             grpSeries.SuspendLayout();
-            grpAddData.SuspendLayout();
             SuspendLayout();
             // 
             // panelControl
@@ -72,7 +62,7 @@
             // btnImportJson
             // 
             btnImportJson.Dock = DockStyle.Top;
-            btnImportJson.Location = new Point(10, 360);
+            btnImportJson.Location = new Point(10, 200);
             btnImportJson.Name = "btnImportJson";
             btnImportJson.Size = new Size(240, 38);
             btnImportJson.TabIndex = 0;
@@ -81,7 +71,7 @@
             // lblStatus
             // 
             lblStatus.Dock = DockStyle.Top;
-            lblStatus.Location = new Point(10, 330);
+            lblStatus.Location = new Point(10, 170);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(240, 30);
             lblStatus.TabIndex = 1;
@@ -89,82 +79,22 @@
             // 
             // grpSeries
             // 
-            grpSeries.Controls.Add(chkBt);
-            grpSeries.Controls.Add(chkByGse);
-            grpSeries.Controls.Add(chkBzGse);
-            grpSeries.Controls.Add(chkByGsm);
-            grpSeries.Controls.Add(chkBzGsm);
+            grpSeries.Controls.Add(panelCheckboxes);
             grpSeries.Dock = DockStyle.Top;
-            grpSeries.Location = new Point(10, 170);
+            grpSeries.Location = new Point(10, 10);
             grpSeries.Name = "grpSeries";
             grpSeries.Size = new Size(240, 160);
             grpSeries.TabIndex = 2;
             grpSeries.TabStop = false;
             grpSeries.Text = "Affichage des Séries";
             // 
-            // chkBt
-            //
-            chkBt.Checked = true;
-            chkBt.CheckState = CheckState.Checked;
-            chkBt.Location = new Point(15, 25);
-            chkBt.Name = "chkBt";
-            chkBt.Size = new Size(210, 24); // Largeur ajustée de 180 à 210
-            chkBt.TabIndex = 0;
-            chkBt.Text = "Bt (Total) (0)";
-            //
-            // chkByGse
-            //
-            chkByGse.Checked = true;
-            chkByGse.CheckState = CheckState.Checked;
-            chkByGse.Location = new Point(15, 50);
-            chkByGse.Name = "chkByGse";
-            chkByGse.Size = new Size(210, 24);
-            chkByGse.TabIndex = 1;
-            chkByGse.Text = "By (GSE) (0)";
-            //
-            // chkBzGse
-            //
-            chkBzGse.Checked = true;
-            chkBzGse.CheckState = CheckState.Checked;
-            chkBzGse.Location = new Point(15, 75);
-            chkBzGse.Name = "chkBzGse";
-            chkBzGse.Size = new Size(210, 24);
-            chkBzGse.TabIndex = 2;
-            chkBzGse.Text = "Bz (GSE) (0)";
-            //
-            // chkByGsm
-            //
-            chkByGsm.Checked = true;
-            chkByGsm.CheckState = CheckState.Checked;
-            chkByGsm.Location = new Point(15, 100);
-            chkByGsm.Name = "chkByGsm";
-            chkByGsm.Size = new Size(210, 24);
-            chkByGsm.TabIndex = 3;
-            chkByGsm.Text = "By (GSM) (0)";
-            //
-            // chkBzGsm
-            //
-            chkBzGsm.Checked = true;
-            chkBzGsm.CheckState = CheckState.Checked;
-            chkBzGsm.Location = new Point(15, 125);
-            chkBzGsm.Name = "chkBzGsm";
-            chkBzGsm.Size = new Size(210, 24);
-            chkBzGsm.TabIndex = 4;
-            chkBzGsm.Text = "Bz (GSM) (0)";
-            // 
             // grpAddData
             // 
-            //grpAddData.Controls.Add(cmbSeriesSelect);
-            //grpAddData.Controls.Add(dtpTimestamp);
-            //grpAddData.Controls.Add(txtValue);
-            //grpAddData.Controls.Add(btnAddValue);
-            //grpAddData.Dock = DockStyle.Top;
-            //grpAddData.Location = new Point(10, 10);
-            //grpAddData.Name = "grpAddData";
-            //grpAddData.Size = new Size(240, 160);
-            //grpAddData.TabIndex = 3;
-            //grpAddData.TabStop = false;
-            //grpAddData.Text = "➕ Saisie Manuelle";
+            grpAddData.Location = new Point(0, 0);
+            grpAddData.Name = "grpAddData";
+            grpAddData.Size = new Size(200, 100);
+            grpAddData.TabIndex = 3;
+            grpAddData.TabStop = false;
             // 
             // cmbSeriesSelect
             // 
@@ -208,22 +138,29 @@
             formsPlot1.Size = new Size(840, 600);
             formsPlot1.TabIndex = 0;
             // 
-            // Form1
+            // panelCheckboxes
+            // 
+            panelCheckboxes.Location = new Point(0, 12);
+            panelCheckboxes.Name = "panelCheckboxes";
+            panelCheckboxes.Size = new Size(240, 148);
+            panelCheckboxes.TabIndex = 0;
+            // 
+            // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1100, 600);
             Controls.Add(formsPlot1);
             Controls.Add(panelControl);
-            Name = "Form1";
+            Name = "MainPage";
             Text = "Plot Those Lines (PTL) - Météo Spatiale";
             panelControl.ResumeLayout(false);
             grpSeries.ResumeLayout(false);
-            grpAddData.ResumeLayout(false);
-            grpAddData.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private FlowLayoutPanel panelCheckboxes;
     }
 }
